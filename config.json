@@ -1,6 +1,6 @@
 {
     "name": "Xe điều khiển",
-    "description": "123",
+    "description": "Mục dành cho bộ sản phẩm xe điều khiển",
     "libs": [
         "carbit.py"
     ],
