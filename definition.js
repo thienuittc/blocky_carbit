@@ -35,7 +35,7 @@ Blockly.Blocks['block_create_car'] = {
         "message0": "khởi động xe",
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -66,7 +66,7 @@ Blockly.Blocks['block_car_forward'] = {
         "inputsInline": true,
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "tốc độ từ 0 đến 1000",
         "helpUrl": ""
       }
@@ -98,7 +98,7 @@ Blockly.Blocks['block_car_backward'] = {
         "inputsInline": true,
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "tốc độ từ 0 đến 1000",
         "helpUrl": ""
       }
@@ -122,7 +122,7 @@ Blockly.Blocks['block_car_stop'] = {
         "message0": "dừng lại",
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -154,7 +154,7 @@ Blockly.Blocks['block_car_left'] = {
         "inputsInline": true,
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "tốc độ từ 0 đến 1000",
         "helpUrl": ""
       }
@@ -186,7 +186,7 @@ Blockly.Blocks['block_car_right'] = {
         "inputsInline": true,
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "tốc độ từ 0 đến 1000",
         "helpUrl": ""
       }
@@ -245,7 +245,7 @@ Blockly.Blocks['block_line_sensor'] = {
         ],
         "inputsInline": true,
         "output": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -279,7 +279,7 @@ Blockly.Blocks['block_led_car'] = {
         ],
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -315,7 +315,7 @@ Blockly.Blocks['block_speed_car'] = {
         ],
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "Tối đa 1000",
         "helpUrl": ""
       }
@@ -377,7 +377,7 @@ Blockly.Blocks['block_control_motor'] = {
         "inputsInline": true,
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "tốc độ từ 0 đến 1000",
         "helpUrl": ""
       }
@@ -435,7 +435,7 @@ Blockly.Blocks['block_led'] = {
           ],
           "previousStatement": null,
           "nextStatement": null,
-          "colour": 230,
+          "colour": "#cb2026",
           "tooltip": "",
           "helpUrl": ""
         }
@@ -473,7 +473,7 @@ Blockly.Blocks['block_single_led'] = {
             "inputsInline": true,
             "previousStatement": null,
             "nextStatement": null,
-            "colour": 230,
+            "colour": "#cb2026",
             "tooltip": "",
             "helpUrl": ""
           }
@@ -499,7 +499,7 @@ Blockly.Blocks['block_ultrasonic'] = {
               "message0": "tạo cảm biến khoảng cách",
               "previousStatement": null,
               "nextStatement": null,
-              "colour": 230,
+              "colour": "#cb2026",
               "tooltip": "",
               "helpUrl": ""
             }
@@ -539,7 +539,7 @@ Blockly.Blocks['block_ultrasonic_checkdistance'] = {
           }
         ],
         "output": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -565,7 +565,7 @@ Blockly.Blocks['block_bluetooth_car'] = {
         "message0": "khởi tạo Bluetooth",
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -599,7 +599,7 @@ Blockly.Blocks['block_checkchar'] = {
         ],
         "previousStatement": null,
         "nextStatement": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -627,7 +627,7 @@ Blockly.Blocks['block_mes_bluetooth'] = {
         "type": "block_mes_bluetooth",
         "message0": "tin nhắn từ bluetooth ",
         "output": null,
-        "colour": 230,
+        "colour": "#cb2026",
         "tooltip": "",
         "helpUrl": ""
       }
@@ -672,7 +672,7 @@ Blockly.Python['block_mes_bluetooth'] = function(block) {
 //         ],
 //         "inputsInline": true,
 //         "output": null,
-//         "colour": 230,
+//         "colour": "#cb2026",
 //         "tooltip": "",
 //         "helpUrl": ""
 //       }
