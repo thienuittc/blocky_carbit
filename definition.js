@@ -215,11 +215,11 @@ Blockly.Blocks['block_line_sensor'] = {
             "name": "NAME1",
             "options": [
               [
-                "Trái",
+                "trái",
                 "pin1"
               ],
               [
-                "Phải",
+                "phải",
                 "pin0"
               ]
             ]
@@ -423,11 +423,11 @@ Blockly.Blocks['block_led'] = {
               "name": "state",
               "options": [
                 [
-                  "Bật",
+                  "bật",
                   "True"
                 ],
                 [
-                  "Tắt",
+                  "tắt",
                   "False"
                 ]
               ]
