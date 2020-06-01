@@ -186,7 +186,7 @@ class Bluetooth_car():
     def check_bluetooth(self):
         a = self.uart.readline()
         if a != None:
-#             str(a, "utf-8").strip("\n")
+             str(a, "utf-8").strip("\n")
              self.msg = a
             return True
         else:
