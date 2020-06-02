@@ -187,7 +187,7 @@ class Bluetooth_car():
         a = self.uart.read()
         if a != None:
             #str(a, "utf-8").strip("\n")
-            self.msg = a #str(a, "utf-8") #.strip("\n")
+            self.msg = str(a, "utf-8") #.strip("\n")
             return True
         else:
             return False
