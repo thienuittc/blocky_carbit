@@ -521,7 +521,7 @@ Blockly.Blocks['block_ultrasonic_checkdistance'] = {
     this.jsonInit(
       {
         "type": "block_ultrasonic_checkdistance",
-        "message0": "đọc cảm khoảng cách theo đơn vị %1",
+        "message0": "đọc cảm biến khoảng cách theo đơn vị %1",
         "args0": [
           {
             "type": "field_dropdown",
