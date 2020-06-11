@@ -11,7 +11,7 @@ class Car():
         pin2.write_digital((1))
         pin3.write_digital((1))
         pin10.write_digital((1))
-        pin7.write_digital((1))
+        pin11.write_digital((1))
         pin12.write_analog(0)
         pin16.write_analog(0)
         pin4.write_digital((0))
@@ -22,7 +22,7 @@ class Car():
         pin2.write_digital((0))
         pin3.write_digital((1))
         pin10.write_digital((1))
-        pin7.write_digital((0))
+        pin11.write_digital((0))
         self.setspeed(speed)
         
     def backward(self,speed):
@@ -30,7 +30,7 @@ class Car():
         pin2.write_digital((1))
         pin3.write_digital((0))
         pin10.write_digital((0))
-        pin7.write_digital((1))
+        pin11.write_digital((1))
         self.setspeed(speed)
 
     def right(self,speed):
@@ -38,7 +38,7 @@ class Car():
         pin2.write_digital((0))
         pin3.write_digital((1))
         pin10.write_digital((0))
-        pin7.write_digital((1))
+        pin11.write_digital((1))
         self.setspeed(speed)
 
     def left(self,speed):
@@ -46,14 +46,14 @@ class Car():
         pin2.write_digital((1))
         pin3.write_digital((0))
         pin10.write_digital((1))
-        pin7.write_digital((0))
+        pin11.write_digital((0))
         self.setspeed(speed)
 
     def stop(self):
         pin2.write_digital((1))
         pin3.write_digital((1))
         pin10.write_digital((1))
-        pin7.write_digital((1))
+        pin11.write_digital((1))
 
     def setspeed(self,speed):
         pin12.write_analog(speed)
@@ -72,10 +72,10 @@ class Car():
     def motor_right(self,state,speed):
         if state:
             pin10.write_digital((1))
-            pin7.write_digital((0))
+            pin11.write_digital((0))
         else:
             pin10.write_digital((0))
-            pin7.write_digital((1))
+            pin11.write_digital((1))
         pin16.write_analog(speed)
 
     def led_left(self,state):
