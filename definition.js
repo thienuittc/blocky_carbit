@@ -368,7 +368,7 @@ Blockly.Blocks['block_control_motor'] = {
     this.jsonInit(
       {
         "type": "block_control_motor",
-        "message0": "điều khiển động cơ %1 %2 với tốc độ %3",
+        "message0": "điều khiển động cơ %1 %2 với tốc độ %3 (%%)",
         "args0": [
           {
             "type": "field_dropdown",
@@ -421,8 +421,14 @@ Blockly.Python['block_control_motor'] = function(block) {
     var dropdown_motor = block.getFieldValue('motor');
     var dropdown_state = block.getFieldValue('state');
     var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+    if (value_speed>100)
+      value_speed = 100*10.23;
+    else if (value_speed<=0)
+      value_speed = 0;
+     else
+    value_speed = value_speed*10.23;
     // TODO: Assemble Python into code variable.
-    var code = 'new_car.'+dropdown_motor+'('+dropdown_state+','+value_speed+')\n';
+    var code = 'new_car.'+dropdown_motor+'('+dropdown_state+','+Math.round(value_speed)+')\n';
     return code;
   };
 
