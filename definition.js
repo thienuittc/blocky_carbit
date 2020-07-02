@@ -108,7 +108,7 @@ Blockly.Python['block_car_forward'] = function(block) {
   else
     value_speed = value_speed*10.23;
   // TODO: Assemble Python into code variable.
-  var code = 'new_car.'+dropdown_action+'('+Math.floor(value_speed)+')\n';
+  var code = 'new_car.'+dropdown_action+'('+Math.round(value_speed)+')\n';
   return code;
 };
 
