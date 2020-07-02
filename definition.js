@@ -53,32 +53,33 @@ Blockly.Python['block_create_car'] = function(block) {
 Blockly.Blocks['block_car_forward'] = {
   init: function() {
     this.jsonInit(
-      {
-        "type": "field_dropdown",
-        "name": "action",
-        "options": [
-          [
-            "chạy thẳng",
-            "forward"
-          ],
-          [
-            "lùi lại",
-            "backward"
-          ],
-          [
-            "xoay trái",
-            "left"
-          ],
-          [
-            "xoay phải",
-            "right"
-          ]
-        ]
-      },
+      
       {
         "type": "block_car_forward",
-        "message0": "chạy thẳng với tốc độ %1",
+        "message0": "%1 với tốc độ %2",
         "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "action",
+            "options": [
+              [
+                "chạy thẳng",
+                "forward"
+              ],
+              [
+                "lùi lại",
+                "backward"
+              ],
+              [
+                "xoay trái",
+                "left"
+              ],
+              [
+                "xoay phải",
+                "right"
+              ]
+            ]
+          },
           {
             "type": "input_value",
             "name": "speed",
@@ -105,37 +106,37 @@ Blockly.Python['block_car_forward'] = function(block) {
   return code;
 };
 
-Blockly.Blocks['block_car_backward'] = {
-  init: function() {
-    this.jsonInit(
-      {
-        "type": "block_car_backward",
-        "message0": "lùi lại với tốc độ %1",
-        "args0": [
-          {
-            "type": "input_value",
-            "name": "speed",
-            "check": "Number"
-          }
-        ],
-        "inputsInline": true,
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": "#cb2026",
-        "tooltip": "tốc độ từ 0 đến 1000",
-        "helpUrl": ""
-      }
-    );
-  }
-};
-Blockly.Python['block_car_backward'] = function(block) {
-  Blockly.Python.definitions_['import_car'] = 'from carbit import *';
-  Blockly.Python.definitions_['create_car'] = 'new_car = Car()';
-  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
-  // TODO: Assemble Python into code variable.
-  var code = 'new_car.backward('+value_speed+')\n';
-  return code;
-};
+// Blockly.Blocks['block_car_backward'] = {
+//   init: function() {
+//     this.jsonInit(
+//       {
+//         "type": "block_car_backward",
+//         "message0": "lùi lại với tốc độ %1",
+//         "args0": [
+//           {
+//             "type": "input_value",
+//             "name": "speed",
+//             "check": "Number"
+//           }
+//         ],
+//         "inputsInline": true,
+//         "previousStatement": null,
+//         "nextStatement": null,
+//         "colour": "#cb2026",
+//         "tooltip": "tốc độ từ 0 đến 1000",
+//         "helpUrl": ""
+//       }
+//     );
+//   }
+// };
+// Blockly.Python['block_car_backward'] = function(block) {
+//   Blockly.Python.definitions_['import_car'] = 'from carbit import *';
+//   Blockly.Python.definitions_['create_car'] = 'new_car = Car()';
+//   var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+//   // TODO: Assemble Python into code variable.
+//   var code = 'new_car.backward('+value_speed+')\n';
+//   return code;
+// };
 
 Blockly.Blocks['block_car_stop'] = {
   init: function() {
@@ -161,120 +162,120 @@ Blockly.Python['block_car_stop'] = function(block) {
   return code;
 };
 
-Blockly.Blocks['block_car_left'] = {
-  init: function() {
-    this.jsonInit(
-      {
-        "type": "block_car_left",
-        "message0": "xoay trái với tốc độ %1",
-        "args0": [
-          {
-            "type": "input_value",
-            "name": "speed",
-            "check": "Number"
-          }
-        ],
-        "inputsInline": true,
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": "#cb2026",
-        "tooltip": "tốc độ từ 0 đến 1000",
-        "helpUrl": ""
-      }
-    );
-  }
-};
-Blockly.Python['block_car_left'] = function(block) {
-  Blockly.Python.definitions_['import_car'] = 'from carbit import *';
-  Blockly.Python.definitions_['create_car'] = 'new_car = Car()';
-  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
-  // TODO: Assemble Python into code variable.
-  var code = 'new_car.left('+value_speed+')\n';
-  return code;
-};
+// Blockly.Blocks['block_car_left'] = {
+//   init: function() {
+//     this.jsonInit(
+//       {
+//         "type": "block_car_left",
+//         "message0": "xoay trái với tốc độ %1",
+//         "args0": [
+//           {
+//             "type": "input_value",
+//             "name": "speed",
+//             "check": "Number"
+//           }
+//         ],
+//         "inputsInline": true,
+//         "previousStatement": null,
+//         "nextStatement": null,
+//         "colour": "#cb2026",
+//         "tooltip": "tốc độ từ 0 đến 1000",
+//         "helpUrl": ""
+//       }
+//     );
+//   }
+// };
+// Blockly.Python['block_car_left'] = function(block) {
+//   Blockly.Python.definitions_['import_car'] = 'from carbit import *';
+//   Blockly.Python.definitions_['create_car'] = 'new_car = Car()';
+//   var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+//   // TODO: Assemble Python into code variable.
+//   var code = 'new_car.left('+value_speed+')\n';
+//   return code;
+// };
 
-Blockly.Blocks['block_car_right'] = {
-  init: function() {
-    this.jsonInit(
-      {
-        "type": "block_car_right",
-        "message0": "xoay phải với tốc độ %1",
-        "args0": [
-          {
-            "type": "input_value",
-            "name": "speed",
-            "check": "Number"
-          }
-        ],
-        "inputsInline": true,
-        "previousStatement": null,
-        "nextStatement": null,
-        "colour": "#cb2026",
-        "tooltip": "tốc độ từ 0 đến 1000",
-        "helpUrl": ""
-      }
-    );
-  }
-};
-Blockly.Python['block_car_right'] = function(block) {
-  Blockly.Python.definitions_['import_car'] = 'from carbit import *';
-  Blockly.Python.definitions_['create_car'] = 'new_car = Car()';
-  var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
-  // TODO: Assemble Python into code variable.
-  var code = 'new_car.right('+value_speed+')\n';
-  return code;
-};
+// Blockly.Blocks['block_car_right'] = {
+//   init: function() {
+//     this.jsonInit(
+//       {
+//         "type": "block_car_right",
+//         "message0": "xoay phải với tốc độ %1",
+//         "args0": [
+//           {
+//             "type": "input_value",
+//             "name": "speed",
+//             "check": "Number"
+//           }
+//         ],
+//         "inputsInline": true,
+//         "previousStatement": null,
+//         "nextStatement": null,
+//         "colour": "#cb2026",
+//         "tooltip": "tốc độ từ 0 đến 1000",
+//         "helpUrl": ""
+//       }
+//     );
+//   }
+// };
+// Blockly.Python['block_car_right'] = function(block) {
+//   Blockly.Python.definitions_['import_car'] = 'from carbit import *';
+//   Blockly.Python.definitions_['create_car'] = 'new_car = Car()';
+//   var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+//   // TODO: Assemble Python into code variable.
+//   var code = 'new_car.right('+value_speed+')\n';
+//   return code;
+// };
 
 
-Blockly.Blocks['block_line_sensor'] = {
-  init: function() {
-    this.jsonInit(
-      {
-        "type": "block_type",
-        "message0": "kiểm tra cảm biến dò đường %1 %2 %3",
-        "args0": [
-          {
-            "type": "field_dropdown",
-            "name": "NAME1",
-            "options": [
-              [
-                "trái",
-                "pin1"
-              ],
-              [
-                "phải",
-                "pin0"
-              ]
-            ]
-          },
-          {
-            "type": "field_dropdown",
-            "name": "NAME",
-            "options": [
-              [
-                ">",
-                ">"
-              ],
-              [
-                "<",
-                "<"
-              ]
-            ]
-          },
-          {
-            "type": "input_value",
-            "name": "num"
-          }
-        ],
-        "inputsInline": true,
-        "output": null,
-        "colour": "#cb2026",
-        "tooltip": "",
-        "helpUrl": ""
-      }
-    );
-  }
-};
+// Blockly.Blocks['block_line_sensor'] = {
+//   init: function() {
+//     this.jsonInit(
+//       {
+//         "type": "block_type",
+//         "message0": "kiểm tra cảm biến dò đường %1 %2 %3",
+//         "args0": [
+//           {
+//             "type": "field_dropdown",
+//             "name": "NAME1",
+//             "options": [
+//               [
+//                 "trái",
+//                 "pin1"
+//               ],
+//               [
+//                 "phải",
+//                 "pin0"
+//               ]
+//             ]
+//           },
+//           {
+//             "type": "field_dropdown",
+//             "name": "NAME",
+//             "options": [
+//               [
+//                 ">",
+//                 ">"
+//               ],
+//               [
+//                 "<",
+//                 "<"
+//               ]
+//             ]
+//           },
+//           {
+//             "type": "input_value",
+//             "name": "num"
+//           }
+//         ],
+//         "inputsInline": true,
+//         "output": null,
+//         "colour": "#cb2026",
+//         "tooltip": "",
+//         "helpUrl": ""
+//       }
+//     );
+//   }
+// };
 
 Blockly.Python['block_line_sensor'] = function(block) {
   Blockly.Python.definitions_['import_car'] = 'from carbit import *';

@@ -9,7 +9,7 @@
     <block type="block_car_forward">
     <value name="speed"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
     </block>
-    <block type="block_car_backward">
+    <!-- <block type="block_car_backward">
     <value name="speed"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
     </block>
     <block type="block_car_left">
@@ -17,7 +17,7 @@
     </block>
     <block type="block_car_right">
     <value name="speed"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
-    </block>
+    </block> -->
     <block type="block_line_sensor">
     <value name="num"><shadow type="math_number"><field name="NUM">0</field></shadow></value>
     </block>
