@@ -56,7 +56,7 @@ Blockly.Blocks['block_car_forward'] = {
       
       {
         "type": "block_car_forward",
-        "message0": "%1 với tốc độ %2 %",
+        "message0": "%1 với tốc độ %2 %%",
         "args0": [
           {
             "type": "field_dropdown",
