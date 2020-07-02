@@ -227,55 +227,55 @@ Blockly.Python['block_car_stop'] = function(block) {
 // };
 
 
-// Blockly.Blocks['block_line_sensor'] = {
-//   init: function() {
-//     this.jsonInit(
-//       {
-//         "type": "block_type",
-//         "message0": "kiểm tra cảm biến dò đường %1 %2 %3",
-//         "args0": [
-//           {
-//             "type": "field_dropdown",
-//             "name": "NAME1",
-//             "options": [
-//               [
-//                 "trái",
-//                 "pin1"
-//               ],
-//               [
-//                 "phải",
-//                 "pin0"
-//               ]
-//             ]
-//           },
-//           {
-//             "type": "field_dropdown",
-//             "name": "NAME",
-//             "options": [
-//               [
-//                 ">",
-//                 ">"
-//               ],
-//               [
-//                 "<",
-//                 "<"
-//               ]
-//             ]
-//           },
-//           {
-//             "type": "input_value",
-//             "name": "num"
-//           }
-//         ],
-//         "inputsInline": true,
-//         "output": null,
-//         "colour": "#cb2026",
-//         "tooltip": "",
-//         "helpUrl": ""
-//       }
-//     );
-//   }
-// };
+Blockly.Blocks['block_line_sensor'] = {
+  init: function() {
+    this.jsonInit(
+      {
+        "type": "block_type",
+        "message0": "kiểm tra cảm biến dò đường %1 %2 %3",
+        "args0": [
+          {
+            "type": "field_dropdown",
+            "name": "NAME1",
+            "options": [
+              [
+                "trái",
+                "pin1"
+              ],
+              [
+                "phải",
+                "pin0"
+              ]
+            ]
+          },
+          {
+            "type": "field_dropdown",
+            "name": "NAME",
+            "options": [
+              [
+                ">",
+                ">"
+              ],
+              [
+                "<",
+                "<"
+              ]
+            ]
+          },
+          {
+            "type": "input_value",
+            "name": "num"
+          }
+        ],
+        "inputsInline": true,
+        "output": null,
+        "colour": "#cb2026",
+        "tooltip": "",
+        "helpUrl": ""
+      }
+    );
+  }
+};
 
 Blockly.Python['block_line_sensor'] = function(block) {
   Blockly.Python.definitions_['import_car'] = 'from carbit import *';
