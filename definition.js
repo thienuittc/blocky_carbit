@@ -101,6 +101,12 @@ Blockly.Python['block_car_forward'] = function(block) {
   Blockly.Python.definitions_['create_car'] = 'new_car = Car()';
   var dropdown_action = block.getFieldValue('action');
   var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
+  if (value_speed>100)
+    value_speed = 100*10.23;
+  else if (value_speed<=0)
+    value_speed = 0;
+  else
+    value_speed = value_speed*10.23;
   // TODO: Assemble Python into code variable.
   var code = 'new_car.'+dropdown_action+'('+value_speed+')\n';
   return code;
