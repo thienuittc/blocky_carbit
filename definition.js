@@ -54,6 +54,28 @@ Blockly.Blocks['block_car_forward'] = {
   init: function() {
     this.jsonInit(
       {
+        "type": "field_dropdown",
+        "name": "action",
+        "options": [
+          [
+            "chạy thẳng",
+            "forward"
+          ],
+          [
+            "lùi lại",
+            "backward"
+          ],
+          [
+            "xoay trái",
+            "left"
+          ],
+          [
+            "xoay phải",
+            "right"
+          ]
+        ]
+      },
+      {
         "type": "block_car_forward",
         "message0": "chạy thẳng với tốc độ %1",
         "args0": [
@@ -76,9 +98,10 @@ Blockly.Blocks['block_car_forward'] = {
 Blockly.Python['block_car_forward'] = function(block) {
   Blockly.Python.definitions_['import_car'] = 'from carbit import *';
   Blockly.Python.definitions_['create_car'] = 'new_car = Car()';
+  var dropdown_action = block.getFieldValue('action');
   var value_speed = Blockly.Python.valueToCode(block, 'speed', Blockly.Python.ORDER_ATOMIC);
   // TODO: Assemble Python into code variable.
-  var code = 'new_car.forward('+value_speed+')\n';
+  var code = 'new_car.'+dropdown_action+'('+value_speed+')\n';
   return code;
 };
 
