@@ -375,11 +375,11 @@ Blockly.Blocks['block_control_motor'] = {
             "name": "motor",
             "options": [
               [
-                "Trái",
+                "trái",
                 "motor_left"
               ],
               [
-                "Phải",
+                "phải",
                 "motor_right"
               ]
             ]
@@ -389,11 +389,11 @@ Blockly.Blocks['block_control_motor'] = {
             "name": "state",
             "options": [
               [
-                "Tiến tới",
+                "tiến tới",
                 "True"
               ],
               [
-                "Lùi lại",
+                "lùi lại",
                 "False"
               ]
             ]
@@ -445,11 +445,11 @@ Blockly.Blocks['block_led'] = {
               "name": "led",
               "options": [
                 [
-                  "Trái",
+                  "trái",
                   "led_left"
                 ],
                 [
-                  "Phải",
+                  "phải",
                   "led_right"
                 ]
               ]
