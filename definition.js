@@ -679,7 +679,7 @@ Blockly.Blocks['block_mes_bluetooth'] = {
     }
   ],
   "output": null,
-  "colour": 230,
+  "colour": "#cb2026",
   "tooltip": "",
   "helpUrl": ""
 }
