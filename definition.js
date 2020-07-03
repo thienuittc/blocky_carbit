@@ -660,12 +660,24 @@ Blockly.Blocks['block_mes_bluetooth'] = {
   init: function() {
     this.jsonInit(
       {
-        "type": "block_mes_bluetooth",
-        "message0": "tin nhắn từ bluetooth ",
-        "output": null,
-        "colour": "#cb2026",
-        "tooltip": "",
-        "helpUrl": ""
+        "type": "field_dropdown",
+      "name": "type",
+      "options": [
+        [
+          "khác",
+          "Flase"
+        ],
+        [
+          "Dabble",
+          "True"
+        ]
+      ]
+    }
+  ],
+  "output": null,
+  "colour": "#cb2026",
+  "tooltip": "",
+  "helpUrl": ""
       }
     );
   }
@@ -675,7 +687,8 @@ Blockly.Python['block_mes_bluetooth'] = function(block) {
   Blockly.Python.definitions_['import_car'] = 'from carbit import *';
   Blockly.Python.definitions_['create_bluetooth'] = 'bluetooth = Bluetooth_car()';
   // TODO: Assemble Python into code variable.
-  var code = 'bluetooth.msg_ble()';
+  var dropdown_type = block.getFieldValue('type');
+  var code = 'bluetooth.msg_ble('+dropdown_type+')';
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Python.ORDER_NONE];
 };
