@@ -668,12 +668,13 @@ Blockly.Blocks['block_mes_bluetooth'] = {
       "name": "type",
       "options": [
         [
-          "khác",
-          "Flase"
-        ],
-        [
           "Dabble",
           "True"
+        ],
+        [
+          "khác",
+          "Flase"
+          
         ]
       ]
     }
