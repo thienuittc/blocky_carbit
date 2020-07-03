@@ -664,6 +664,10 @@ Blockly.Blocks['block_mes_bluetooth'] = {
   "message0": "tin nhắn bluetooth từ %1",
   "args0": [
     {
+  "type": "block_mes_bluetooth",
+  "message0": "tin nhắn bluetooth từ %1",
+  "args0": [
+    {
       "type": "field_dropdown",
       "name": "type",
       "options": [
@@ -679,16 +683,10 @@ Blockly.Blocks['block_mes_bluetooth'] = {
     }
   ],
   "output": null,
-  "colour": "#cb2026",
+  "colour": 230,
   "tooltip": "",
   "helpUrl": ""
 }
-  ],
-  "output": null,
-  "colour": "#cb2026",
-  "tooltip": "",
-  "helpUrl": ""
-      }
     );
   }
 };
