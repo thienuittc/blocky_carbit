@@ -3,6 +3,7 @@ import machine, neopixel
 import time
 import _thread
 from machine import UART
+import binascii
 
 
 class Car():
@@ -191,8 +192,23 @@ class Bluetooth_car():
             return True
         else:
             return False
-    def msg_ble(self):
-        return self.msg
-
-
-
+    def msg_ble(self,dabble=True):
+        if dabble:
+            return get_char(binascii.hexlify(self.msg).decode())
+        else:
+            return self.msg
+def get_char(char):
+    switcher={
+        'ff01010102000000':'stop',
+        'ff01010102000100':'F',
+        'ff01010102000200':'B',
+        'ff01010102000400':'L',
+        'ff01010102000800':'R',
+        'ff01010102100000':'X',
+        'ff01010102080000':'Y',
+        'ff01010102040000':'A',
+        'ff01010102200000':'B',
+        'ff01010102020000':'select',
+        'ff01010102010000':'start'
+        }
+    return switcher.get(char,"not support")
