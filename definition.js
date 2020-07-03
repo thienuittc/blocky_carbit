@@ -659,11 +659,7 @@ Blockly.Python['block_checkchar'] = function(block) {
 Blockly.Blocks['block_mes_bluetooth'] = {
   init: function() {
     this.jsonInit(
-      {
-  "type": "block_mes_bluetooth",
-  "message0": "tin nhắn bluetooth từ %1",
-  "args0": [
-    {
+     {
   "type": "block_mes_bluetooth",
   "message0": "tin nhắn bluetooth từ %1",
   "args0": [
