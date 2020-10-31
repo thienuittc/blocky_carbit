@@ -1,6 +1,6 @@
 {
     "name": "Xe điều khiển",
-    "description": "Mục dành cho bộ sản phẩm xe điều khiển",
+    "description": "Mục mở rộng dành cho bộ kit xe điều khiển Car:Bit",
     "libs": [
         "carbit.py"
     ],

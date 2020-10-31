@@ -1,14 +1,12 @@
 from yolobit import *
 import machine, neopixel
 import time
-import _thread
 from machine import UART
 import binascii
 
 
 class Car():
     def __init__(self):
-        # _thread.start_new_thread(testThread,())
         pin2.write_digital((1))
         pin3.write_digital((1))
         pin10.write_digital((1))
@@ -177,13 +175,26 @@ class Ultrasonic_car():
         cms = (pulse_time / 2) / 29.1
         return cms
 
+keycodes = {
+    'ff01010102000000':'stop',
+    'ff01010102000100':'F',
+    'ff01010102000200':'B',
+    'ff01010102000400':'L',
+    'ff01010102000800':'R',
+    'ff01010102100000':'X',
+    'ff01010102080000':'Y',
+    'ff01010102040000':'A',
+    'ff01010102200000':'B',
+    'ff01010102020000':'select',
+    'ff01010102010000':'start'
+}
 
 class Bluetooth_car():
-    global item
     def __init__(self):
-        self.uart = UART(1, 9600)
-        self.uart.init(baudrate=9600,bits=8, parity=None, stop=1, tx=pin8.pin,rx=pin9.pin)
+        self.uart = UART(2, baudrate=9600, rx=pin9.pin, tx=pin8.pin, timeout=10)
+        self.uart.init(parity=None, stop=1, bits=8)
         self.msg = ""
+
     def check_bluetooth(self):
         a = self.uart.read()
         if a != None:
@@ -192,23 +203,9 @@ class Bluetooth_car():
             return True
         else:
             return False
-    def msg_ble(self,dabble=True):
+
+    def msg_ble(self, dabble=True):
         if dabble:
-            return get_char(binascii.hexlify(self.msg).decode())
+            return keycodes.get(binascii.hexlify(self.msg).decode(), "not support")
         else:
             return self.msg
-def get_char(char):
-    switcher={
-        'ff01010102000000':'stop',
-        'ff01010102000100':'F',
-        'ff01010102000200':'B',
-        'ff01010102000400':'L',
-        'ff01010102000800':'R',
-        'ff01010102100000':'X',
-        'ff01010102080000':'Y',
-        'ff01010102040000':'A',
-        'ff01010102200000':'B',
-        'ff01010102020000':'select',
-        'ff01010102010000':'start'
-        }
-    return switcher.get(char,"not support")
